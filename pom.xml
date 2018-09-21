@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- basic -->
+    <modelVersion>4.0.0</modelVersion> <!--maven2.0 must like this-->
+    <groupId>fan.spring.prove</groupId>
+    <artifactId>springprove</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springprove</name>
+    <description>insist to improve yourself</description>
+    <!-- 继承说明：
+      Maven的用户可以通过继承spring-boot-starter-parent项目来获得一些合理的默认配置，
+      也可以自己来配置所要使用的版本
+            比如dependencies中springboot相关-->
+   <!-- <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+        <relativePath/>
+    </parent>-->
+
+    <!-- child modules -->
+    <modules>
+        <module>bootadmin</module>
+        <module>bootservice</module>
+        <module>bootdomain</module>
+        <module>bootcommon</module>
+
+
+    </modules>
+
+    <!--  properties which can used in other places -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>2.0.4.RELEASE</spring.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.49</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+
+</project>

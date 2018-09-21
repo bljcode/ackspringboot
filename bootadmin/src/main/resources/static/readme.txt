@@ -1,0 +1,1 @@
+springboot默认静态文件的目录
